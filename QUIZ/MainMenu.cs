@@ -37,15 +37,15 @@ namespace QUIZ
             string password = textBoxPassword.Text;
 
             bool nextStep = CheckEnterLoginPassword(login, password);
-
-            var db = new DataBase();
+            nextStep = CheckLogin(nextStep, login);
 
             if (nextStep == true)
             {
-                var user = new List<Users>();
-                user = db.UsersData();
+                this.Hide();
+                ChooseMenu chooseMenu = new ChooseMenu();
+                chooseMenu.Show();
             }
-            
+
         }
 
         public bool CheckEnterLoginPassword(string login, string password)
@@ -68,6 +68,29 @@ namespace QUIZ
             }
 
             return true;
+        }
+
+        public bool CheckLogin(bool nextStep, string login)
+        {
+            var db = new DataBase();
+
+            if (nextStep == true)
+            {
+                var users = new List<Users>();
+                users = db.UsersData();
+
+                foreach (var user in users)
+                {
+                    if (user.UserName == login)
+                    {
+                        return true;
+                    }
+                    Error(buttonEnterLoginPassword, "Login or Password doesn't exist!");
+                    return false;
+                }
+            }
+            Error(buttonEnterLoginPassword, "Login or Password doesn't exist!");
+            return false;
         }
     }
 }

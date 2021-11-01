@@ -89,6 +89,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChooseMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseMenu.Designer.cs">
+      <DependentUpon>ChooseMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataBase.cs" />
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
