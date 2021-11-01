@@ -16,5 +16,14 @@ namespace QUIZ
         {
             InitializeComponent();
         }
+
+        private void checkBoxShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxShowPassword.Checked == true)
+            {
+                textBoxPassword.UseSystemPasswordChar = false;
+            }
+            else textBoxPassword.UseSystemPasswordChar = true;
+        }
     }
 }
