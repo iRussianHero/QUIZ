@@ -29,12 +29,17 @@ namespace QUIZ
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelLogin = new System.Windows.Forms.Label();
+            this.labelPassword = new System.Windows.Forms.Label();
             this.textBoxLogin = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.checkBoxShowPassword = new System.Windows.Forms.CheckBox();
+            this.buttonEnterLoginPassword = new System.Windows.Forms.Button();
+            this.buttonRegistration = new System.Windows.Forms.Button();
+            this.errorProviderMainMenu = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderMainMenu)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -47,27 +52,27 @@ namespace QUIZ
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome to QUIZ game!";
             // 
-            // label2
+            // labelLogin
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(225, 194);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Login:";
+            this.labelLogin.AutoSize = true;
+            this.labelLogin.Location = new System.Drawing.Point(225, 249);
+            this.labelLogin.Name = "labelLogin";
+            this.labelLogin.Size = new System.Drawing.Size(36, 13);
+            this.labelLogin.TabIndex = 1;
+            this.labelLogin.Text = "Login:";
             // 
-            // label3
+            // labelPassword
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(205, 227);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Password:";
+            this.labelPassword.AutoSize = true;
+            this.labelPassword.Location = new System.Drawing.Point(205, 282);
+            this.labelPassword.Name = "labelPassword";
+            this.labelPassword.Size = new System.Drawing.Size(56, 13);
+            this.labelPassword.TabIndex = 2;
+            this.labelPassword.Text = "Password:";
             // 
             // textBoxLogin
             // 
-            this.textBoxLogin.Location = new System.Drawing.Point(267, 193);
+            this.textBoxLogin.Location = new System.Drawing.Point(267, 248);
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(235, 20);
             this.textBoxLogin.TabIndex = 3;
@@ -75,7 +80,7 @@ namespace QUIZ
             // textBoxPassword
             // 
             this.textBoxPassword.AcceptsReturn = true;
-            this.textBoxPassword.Location = new System.Drawing.Point(267, 225);
+            this.textBoxPassword.Location = new System.Drawing.Point(267, 280);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(235, 20);
             this.textBoxPassword.TabIndex = 4;
@@ -85,7 +90,7 @@ namespace QUIZ
             // checkBoxShowPassword
             // 
             this.checkBoxShowPassword.AutoSize = true;
-            this.checkBoxShowPassword.Location = new System.Drawing.Point(509, 228);
+            this.checkBoxShowPassword.Location = new System.Drawing.Point(509, 283);
             this.checkBoxShowPassword.Name = "checkBoxShowPassword";
             this.checkBoxShowPassword.Size = new System.Drawing.Size(102, 17);
             this.checkBoxShowPassword.TabIndex = 5;
@@ -93,19 +98,48 @@ namespace QUIZ
             this.checkBoxShowPassword.UseVisualStyleBackColor = true;
             this.checkBoxShowPassword.CheckedChanged += new System.EventHandler(this.checkBoxShowPassword_CheckedChanged);
             // 
+            // buttonEnterLoginPassword
+            // 
+            this.buttonEnterLoginPassword.Location = new System.Drawing.Point(350, 319);
+            this.buttonEnterLoginPassword.Name = "buttonEnterLoginPassword";
+            this.buttonEnterLoginPassword.Size = new System.Drawing.Size(75, 23);
+            this.buttonEnterLoginPassword.TabIndex = 6;
+            this.buttonEnterLoginPassword.Text = "Enter";
+            this.buttonEnterLoginPassword.UseVisualStyleBackColor = true;
+            this.buttonEnterLoginPassword.Click += new System.EventHandler(this.buttonEnterLoginPassword_Click);
+            // 
+            // buttonRegistration
+            // 
+            this.buttonRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonRegistration.Location = new System.Drawing.Point(340, 134);
+            this.buttonRegistration.Name = "buttonRegistration";
+            this.buttonRegistration.Size = new System.Drawing.Size(95, 39);
+            this.buttonRegistration.TabIndex = 7;
+            this.buttonRegistration.Text = "Registration";
+            this.buttonRegistration.UseVisualStyleBackColor = true;
+            // 
+            // errorProviderMainMenu
+            // 
+            this.errorProviderMainMenu.BlinkRate = 0;
+            this.errorProviderMainMenu.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderMainMenu.ContainerControl = this;
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonRegistration);
+            this.Controls.Add(this.buttonEnterLoginPassword);
             this.Controls.Add(this.checkBoxShowPassword);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxLogin);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelPassword);
+            this.Controls.Add(this.labelLogin);
             this.Controls.Add(this.label1);
             this.Name = "MainMenu";
             this.Text = "QUIZ game v0.1";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderMainMenu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -114,11 +148,14 @@ namespace QUIZ
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelLogin;
+        private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.TextBox textBoxLogin;
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.CheckBox checkBoxShowPassword;
+        private System.Windows.Forms.Button buttonEnterLoginPassword;
+        private System.Windows.Forms.Button buttonRegistration;
+        private System.Windows.Forms.ErrorProvider errorProviderMainMenu;
     }
 }
 
