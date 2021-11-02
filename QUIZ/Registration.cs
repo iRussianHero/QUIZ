@@ -21,5 +21,21 @@ namespace QUIZ
         {
             this.Hide();
         }
+        private void Error(Control name, string error)
+        {
+            errorProviderRegistration.SetIconAlignment(name, ErrorIconAlignment.MiddleLeft);
+            errorProviderRegistration.SetError(name, error);
+        }
+        private void buttonRegister_Click(object sender, EventArgs e)
+        {
+            string name = textBoxName.Text;
+            string password = textBoxPassword.Text;
+            string repeatPassword = textBoxRepeatPassword.Text;
+            string datOfBirth = dateTimePickerDateOfBirth.Text;
+
+
+        }
+
+
     }
 }

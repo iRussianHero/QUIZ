@@ -40,6 +40,7 @@ namespace QUIZ
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.textBoxRepeatPassword = new System.Windows.Forms.TextBox();
             this.errorProviderRegistration = new System.Windows.Forms.ErrorProvider(this.components);
+            this.buttonRegister = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderRegistration)).BeginInit();
             this.SuspendLayout();
             // 
@@ -124,11 +125,22 @@ namespace QUIZ
             this.errorProviderRegistration.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderRegistration.ContainerControl = this;
             // 
+            // buttonRegister
+            // 
+            this.buttonRegister.Location = new System.Drawing.Point(355, 342);
+            this.buttonRegister.Name = "buttonRegister";
+            this.buttonRegister.Size = new System.Drawing.Size(75, 23);
+            this.buttonRegister.TabIndex = 9;
+            this.buttonRegister.Text = "Register";
+            this.buttonRegister.UseVisualStyleBackColor = true;
+            this.buttonRegister.Click += new System.EventHandler(this.buttonRegister_Click);
+            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonRegister);
             this.Controls.Add(this.textBoxRepeatPassword);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxName);
@@ -159,5 +171,6 @@ namespace QUIZ
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.TextBox textBoxRepeatPassword;
         private System.Windows.Forms.ErrorProvider errorProviderRegistration;
+        private System.Windows.Forms.Button buttonRegister;
     }
 }
