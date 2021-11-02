@@ -30,7 +30,7 @@ namespace QUIZ
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelRegisterNewGamer = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
             this.labelPassword = new System.Windows.Forms.Label();
             this.labelRepeatPassword = new System.Windows.Forms.Label();
@@ -44,15 +44,15 @@ namespace QUIZ
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderRegistration)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // labelRegisterNewGamer
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(293, 83);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(213, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Register new Gamer:";
+            this.labelRegisterNewGamer.AutoSize = true;
+            this.labelRegisterNewGamer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelRegisterNewGamer.Location = new System.Drawing.Point(293, 83);
+            this.labelRegisterNewGamer.Name = "labelRegisterNewGamer";
+            this.labelRegisterNewGamer.Size = new System.Drawing.Size(213, 25);
+            this.labelRegisterNewGamer.TabIndex = 0;
+            this.labelRegisterNewGamer.Text = "Register new Gamer:";
             // 
             // labelName
             // 
@@ -149,7 +149,7 @@ namespace QUIZ
             this.Controls.Add(this.labelRepeatPassword);
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.labelName);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelRegisterNewGamer);
             this.Name = "Registration";
             this.Text = "Registration";
             this.Load += new System.EventHandler(this.Registration_Load);
@@ -161,7 +161,7 @@ namespace QUIZ
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelRegisterNewGamer;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.Label labelRepeatPassword;

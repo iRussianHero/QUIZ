@@ -31,11 +31,44 @@ namespace QUIZ
             string name = textBoxName.Text;
             string password = textBoxPassword.Text;
             string repeatPassword = textBoxRepeatPassword.Text;
-            string datOfBirth = dateTimePickerDateOfBirth.Text;
+            string dateOfBirth = dateTimePickerDateOfBirth.Text;
 
+            if (CheckInputData(name, password, repeatPassword, dateOfBirth) == true)
+            {
 
+            }
         }
 
+        public bool CheckInputData(string name, string password, string repeatPassword, string dateOfBirth)
+        {
+            errorProviderRegistration.Clear();
 
+            if (name == string.Empty)
+            {
+                Error(labelName, "You enter empty Name");
+                return false;
+            }
+
+            if(password == string.Empty)
+            {
+                Error(labelPassword, "Yo enter empty Password");
+                return false;
+            }
+
+            if (password != repeatPassword)
+            {
+                Error(labelRepeatPassword, "Password and Repeat password mismatch");
+                return false;
+            }
+
+            string compare = (DateTime.Now).ToString("yyyy.MM.dd");
+            if (dateOfBirth == compare)
+            {
+                Error(labelDateOfBirth, "You forgot change Date of Birth");
+                return false;
+            }
+
+            return true;
+        }
     }
 }

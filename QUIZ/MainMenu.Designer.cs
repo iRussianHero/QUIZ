@@ -117,6 +117,7 @@ namespace QUIZ
             this.buttonRegistration.TabIndex = 7;
             this.buttonRegistration.Text = "Registration";
             this.buttonRegistration.UseVisualStyleBackColor = true;
+            this.buttonRegistration.Click += new System.EventHandler(this.buttonRegistration_Click);
             // 
             // errorProviderMainMenu
             // 

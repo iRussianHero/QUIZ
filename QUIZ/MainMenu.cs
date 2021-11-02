@@ -54,16 +54,13 @@ namespace QUIZ
 
             if (login == string.Empty)
             {
-                Error(labelLogin, "You enter empty Login!");
+                Error(labelLogin, "You enter empty Login");
+                return false;
             }
 
             if (password == string.Empty)
             {
-                Error(labelPassword, "You enter empty Password!");
-            }
-
-            if (login == string.Empty || password == string.Empty)
-            {
+                Error(labelPassword, "You enter empty Password");
                 return false;
             }
 
@@ -85,12 +82,19 @@ namespace QUIZ
                     {
                         return true;
                     }
-                    Error(buttonEnterLoginPassword, "Login or Password doesn't exist!");
+                    Error(buttonEnterLoginPassword, "Login or Password doesn't exist");
                     return false;
                 }
             }
-            Error(buttonEnterLoginPassword, "Login or Password doesn't exist!");
+            Error(buttonEnterLoginPassword, "Login or Password doesn't exist");
             return false;
+        }
+
+        private void buttonRegistration_Click(object sender, EventArgs e)
+        {
+            Registration Registration = new Registration();
+            this.Hide();
+            Registration.Show();
         }
     }
 }
