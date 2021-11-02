@@ -29,109 +29,119 @@ namespace QUIZ
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.labelName = new System.Windows.Forms.Label();
+            this.labelPassword = new System.Windows.Forms.Label();
+            this.labelRepeatPassword = new System.Windows.Forms.Label();
+            this.labelDateOfBirth = new System.Windows.Forms.Label();
+            this.dateTimePickerDateOfBirth = new System.Windows.Forms.DateTimePicker();
+            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.textBoxRepeatPassword = new System.Windows.Forms.TextBox();
+            this.errorProviderRegistration = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderRegistration)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(299, 35);
+            this.label1.Location = new System.Drawing.Point(293, 83);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(213, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Register new Gamer:";
             // 
-            // label2
+            // labelName
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(138, 171);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Name:";
+            this.labelName.AutoSize = true;
+            this.labelName.Location = new System.Drawing.Point(254, 194);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(38, 13);
+            this.labelName.TabIndex = 1;
+            this.labelName.Text = "Name:";
             // 
-            // label3
+            // labelPassword
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(141, 188);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Password:";
+            this.labelPassword.AutoSize = true;
+            this.labelPassword.Location = new System.Drawing.Point(236, 233);
+            this.labelPassword.Name = "labelPassword";
+            this.labelPassword.Size = new System.Drawing.Size(56, 13);
+            this.labelPassword.TabIndex = 2;
+            this.labelPassword.Text = "Password:";
             // 
-            // label4
+            // labelRepeatPassword
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(141, 205);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Repeat password:";
+            this.labelRepeatPassword.AutoSize = true;
+            this.labelRepeatPassword.Location = new System.Drawing.Point(199, 259);
+            this.labelRepeatPassword.Name = "labelRepeatPassword";
+            this.labelRepeatPassword.Size = new System.Drawing.Size(93, 13);
+            this.labelRepeatPassword.TabIndex = 3;
+            this.labelRepeatPassword.Text = "Repeat password:";
             // 
-            // label5
+            // labelDateOfBirth
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(141, 222);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Date of birth:";
+            this.labelDateOfBirth.AutoSize = true;
+            this.labelDateOfBirth.Location = new System.Drawing.Point(224, 296);
+            this.labelDateOfBirth.Name = "labelDateOfBirth";
+            this.labelDateOfBirth.Size = new System.Drawing.Size(68, 13);
+            this.labelDateOfBirth.TabIndex = 4;
+            this.labelDateOfBirth.Text = "Date of birth:";
             // 
-            // dateTimePicker1
+            // dateTimePickerDateOfBirth
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(323, 290);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 5;
+            this.dateTimePickerDateOfBirth.CustomFormat = "yyyy.MM.dd";
+            this.dateTimePickerDateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerDateOfBirth.Location = new System.Drawing.Point(298, 296);
+            this.dateTimePickerDateOfBirth.Name = "dateTimePickerDateOfBirth";
+            this.dateTimePickerDateOfBirth.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerDateOfBirth.TabIndex = 5;
             // 
-            // textBox1
+            // textBoxName
             // 
-            this.textBox1.Location = new System.Drawing.Point(323, 185);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 20);
-            this.textBox1.TabIndex = 6;
+            this.textBoxName.Location = new System.Drawing.Point(298, 191);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(200, 20);
+            this.textBoxName.TabIndex = 6;
             // 
-            // textBox2
+            // textBoxPassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(323, 224);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 20);
-            this.textBox2.TabIndex = 7;
+            this.textBoxPassword.Location = new System.Drawing.Point(298, 230);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.Size = new System.Drawing.Size(200, 20);
+            this.textBoxPassword.TabIndex = 7;
             // 
-            // textBox3
+            // textBoxRepeatPassword
             // 
-            this.textBox3.Location = new System.Drawing.Point(323, 250);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(200, 20);
-            this.textBox3.TabIndex = 8;
+            this.textBoxRepeatPassword.Location = new System.Drawing.Point(298, 256);
+            this.textBoxRepeatPassword.Name = "textBoxRepeatPassword";
+            this.textBoxRepeatPassword.Size = new System.Drawing.Size(200, 20);
+            this.textBoxRepeatPassword.TabIndex = 8;
+            // 
+            // errorProviderRegistration
+            // 
+            this.errorProviderRegistration.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderRegistration.ContainerControl = this;
             // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBoxRepeatPassword);
+            this.Controls.Add(this.textBoxPassword);
+            this.Controls.Add(this.textBoxName);
+            this.Controls.Add(this.dateTimePickerDateOfBirth);
+            this.Controls.Add(this.labelDateOfBirth);
+            this.Controls.Add(this.labelRepeatPassword);
+            this.Controls.Add(this.labelPassword);
+            this.Controls.Add(this.labelName);
             this.Controls.Add(this.label1);
             this.Name = "Registration";
             this.Text = "Registration";
             this.Load += new System.EventHandler(this.Registration_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderRegistration)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,13 +150,14 @@ namespace QUIZ
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.Label labelPassword;
+        private System.Windows.Forms.Label labelRepeatPassword;
+        private System.Windows.Forms.Label labelDateOfBirth;
+        private System.Windows.Forms.DateTimePicker dateTimePickerDateOfBirth;
+        private System.Windows.Forms.TextBox textBoxName;
+        private System.Windows.Forms.TextBox textBoxPassword;
+        private System.Windows.Forms.TextBox textBoxRepeatPassword;
+        private System.Windows.Forms.ErrorProvider errorProviderRegistration;
     }
 }
