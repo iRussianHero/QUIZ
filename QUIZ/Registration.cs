@@ -35,6 +35,7 @@ namespace QUIZ
 
             if (CheckInputData(name, password, repeatPassword, dateOfBirth) == true)
             {
+                DataBase DB = new DataBase();
 
             }
         }
@@ -49,7 +50,7 @@ namespace QUIZ
                 return false;
             }
 
-            if(password == string.Empty)
+            if (password == string.Empty)
             {
                 Error(labelPassword, "Yo enter empty Password");
                 return false;
@@ -66,6 +67,20 @@ namespace QUIZ
             {
                 Error(labelDateOfBirth, "You forgot change Date of Birth");
                 return false;
+            }
+
+            var db = new DataBase();
+
+            var users = new List<Users>();
+            users = db.UsersData();
+
+            foreach (var user in users)
+            {
+                if (user.UserName == name)
+                {
+                    Error(buttonRegister, "This Name alredy exist");
+                    return false;
+                }
             }
 
             return true;
