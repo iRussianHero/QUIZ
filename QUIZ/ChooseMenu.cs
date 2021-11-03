@@ -12,6 +12,10 @@ namespace QUIZ
 {
     public partial class ChooseMenu : Form
     {
+        public ChooseMenu()
+        {
+            InitializeComponent();
+        }
         public ChooseMenu(string data)
         {
             InitializeComponent();
