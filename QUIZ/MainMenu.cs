@@ -41,9 +41,9 @@ namespace QUIZ
 
             if (nextStep == true)
             {
-                this.Close();
                 ChooseMenu ChooseMenu = new ChooseMenu();
                 ChooseMenu.Show();
+                this.Hide();
             }
         }
 

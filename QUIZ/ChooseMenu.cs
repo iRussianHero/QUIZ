@@ -21,6 +21,7 @@ namespace QUIZ
             buttonStartNewQUIZ.Hide();
             buttonTheme1.Show();
             buttonTheme2.Show();
+            buttonRandomTheme.Show();
         }
     }
 }

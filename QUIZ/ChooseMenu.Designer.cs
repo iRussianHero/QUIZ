@@ -42,7 +42,7 @@ namespace QUIZ
             // buttonStartNewQUIZ
             // 
             this.buttonStartNewQUIZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonStartNewQUIZ.Location = new System.Drawing.Point(314, 102);
+            this.buttonStartNewQUIZ.Location = new System.Drawing.Point(321, 57);
             this.buttonStartNewQUIZ.Name = "buttonStartNewQUIZ";
             this.buttonStartNewQUIZ.Size = new System.Drawing.Size(162, 52);
             this.buttonStartNewQUIZ.TabIndex = 0;
@@ -62,7 +62,7 @@ namespace QUIZ
             // buttonShowResults
             // 
             this.buttonShowResults.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonShowResults.Location = new System.Drawing.Point(314, 218);
+            this.buttonShowResults.Location = new System.Drawing.Point(236, 204);
             this.buttonShowResults.Name = "buttonShowResults";
             this.buttonShowResults.Size = new System.Drawing.Size(162, 52);
             this.buttonShowResults.TabIndex = 2;
@@ -72,7 +72,7 @@ namespace QUIZ
             // buttonShowTop20
             // 
             this.buttonShowTop20.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonShowTop20.Location = new System.Drawing.Point(314, 276);
+            this.buttonShowTop20.Location = new System.Drawing.Point(404, 204);
             this.buttonShowTop20.Name = "buttonShowTop20";
             this.buttonShowTop20.Size = new System.Drawing.Size(162, 52);
             this.buttonShowTop20.TabIndex = 3;
@@ -82,7 +82,7 @@ namespace QUIZ
             // buttonSettings
             // 
             this.buttonSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSettings.Location = new System.Drawing.Point(314, 404);
+            this.buttonSettings.Location = new System.Drawing.Point(321, 359);
             this.buttonSettings.Name = "buttonSettings";
             this.buttonSettings.Size = new System.Drawing.Size(162, 34);
             this.buttonSettings.TabIndex = 4;
@@ -92,7 +92,7 @@ namespace QUIZ
             // buttonTheme1
             // 
             this.buttonTheme1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonTheme1.Location = new System.Drawing.Point(146, 160);
+            this.buttonTheme1.Location = new System.Drawing.Point(153, 115);
             this.buttonTheme1.Name = "buttonTheme1";
             this.buttonTheme1.Size = new System.Drawing.Size(162, 52);
             this.buttonTheme1.TabIndex = 5;
@@ -103,7 +103,7 @@ namespace QUIZ
             // buttonTheme2
             // 
             this.buttonTheme2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonTheme2.Location = new System.Drawing.Point(314, 160);
+            this.buttonTheme2.Location = new System.Drawing.Point(321, 115);
             this.buttonTheme2.Name = "buttonTheme2";
             this.buttonTheme2.Size = new System.Drawing.Size(162, 52);
             this.buttonTheme2.TabIndex = 6;
@@ -114,7 +114,7 @@ namespace QUIZ
             // buttonRandomTheme
             // 
             this.buttonRandomTheme.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonRandomTheme.Location = new System.Drawing.Point(482, 160);
+            this.buttonRandomTheme.Location = new System.Drawing.Point(489, 115);
             this.buttonRandomTheme.Name = "buttonRandomTheme";
             this.buttonRandomTheme.Size = new System.Drawing.Size(162, 52);
             this.buttonRandomTheme.TabIndex = 7;
