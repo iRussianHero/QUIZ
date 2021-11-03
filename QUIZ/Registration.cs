@@ -32,13 +32,17 @@ namespace QUIZ
             string password = textBoxPassword.Text;
             string repeatPassword = textBoxRepeatPassword.Text;
             string email = textBoxEmail.Text;
-            string dateOfBirth = dateTimePickerDateOfBirth.Text;
+            string dateOfBirth = (dateTimePickerDateOfBirth.Value).ToString("yyyy-MM-dd");
 
             if (CheckInputData(name, password, repeatPassword, email, dateOfBirth) == true)
             {
                 DataBase db = new DataBase();
                 db.RegisterNewGamer(name, password, email, dateOfBirth);
-                
+
+                this.Close();
+
+                MainMenu MainMenu = new MainMenu();
+                MainMenu.Activate();
             }
         }
 
