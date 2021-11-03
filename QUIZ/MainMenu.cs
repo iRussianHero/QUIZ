@@ -42,10 +42,9 @@ namespace QUIZ
             if (nextStep == true)
             {
                 this.Close();
-                ChooseMenu chooseMenu = new ChooseMenu();
-                chooseMenu.Activate();
+                ChooseMenu ChooseMenu = new ChooseMenu();
+                ChooseMenu.Show();
             }
-
         }
 
         public bool CheckEnterLoginPassword(string login, string password)
@@ -74,7 +73,7 @@ namespace QUIZ
             if (nextStep == true)
             {
                 var users = new List<Users>();
-                users = db.UsersData();
+                users = db.UsersData(); //TODO добавление всех пользователей в LIST
 
                 foreach (var user in users)
                 {

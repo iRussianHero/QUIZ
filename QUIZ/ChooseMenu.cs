@@ -16,5 +16,11 @@ namespace QUIZ
         {
             InitializeComponent();
         }
+        private void StartNewQUIZ(object sender, EventArgs e)
+        {
+            buttonStartNewQUIZ.Hide();
+            buttonTheme1.Show();
+            buttonTheme2.Show();
+        }
     }
 }
