@@ -85,5 +85,11 @@ namespace QUIZ
 
             return true;
         }
+
+        private void Registration_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MainMenu MainMenu = new MainMenu();
+            MainMenu.Show();
+        }
     }
 }

@@ -95,9 +95,12 @@ namespace QUIZ
             this.dateTimePickerDateOfBirth.CustomFormat = "yyyy.MM.dd";
             this.dateTimePickerDateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerDateOfBirth.Location = new System.Drawing.Point(298, 296);
+            this.dateTimePickerDateOfBirth.MaxDate = new System.DateTime(2050, 1, 1, 0, 0, 0, 0);
+            this.dateTimePickerDateOfBirth.MinDate = new System.DateTime(1950, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerDateOfBirth.Name = "dateTimePickerDateOfBirth";
             this.dateTimePickerDateOfBirth.Size = new System.Drawing.Size(200, 20);
             this.dateTimePickerDateOfBirth.TabIndex = 5;
+            this.dateTimePickerDateOfBirth.Value = new System.DateTime(2021, 11, 3, 0, 0, 0, 0);
             // 
             // textBoxName
             // 
@@ -152,6 +155,7 @@ namespace QUIZ
             this.Controls.Add(this.labelRegisterNewGamer);
             this.Name = "Registration";
             this.Text = "Registration";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Registration_FormClosed);
             this.Load += new System.EventHandler(this.Registration_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderRegistration)).EndInit();
             this.ResumeLayout(false);

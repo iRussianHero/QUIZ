@@ -30,7 +30,11 @@ namespace QUIZ
             command.CommandText = sql;
             var res = command.ExecuteReader();
 
-            if (!res.HasRows) return null;
+            if (!res.HasRows)
+            {
+                Close();
+                return null;
+            }
 
             while (res.Read())
             {
@@ -38,32 +42,23 @@ namespace QUIZ
                 var userName = res.GetString("user_name");
                 var userPassword = res.GetString("user_password");
                 var email = res.GetString("user_email");
-                var dateOfBirth = res.GetDateTime("user_date_of_birthday");
+                var dateOfBirth = res.GetString("user_date_of_birthday");
                 temp.Add(new Users { UserId = userId, UserName = userName, UserPassword = userPassword, Email = email, DateOfBirthday = dateOfBirth });
             }
 
+            Close();
             return temp;
         }
 
-        //public void RegisterNewGamer(string name, string password, string dateOfBirth)
-        //{
-        //    Open();
-        //    var temp = new List<Users>();
-        //    var sql = "SELECT * FROM users;";
-        //    command.CommandText = sql;
-        //    var res = command.ExecuteReader();
+        public void RegisterNewGamer(string name, string password, string dateOfBirth)
+        {
+            Open();
+            var temp = new List<Users>();
 
-        //    if (!res.HasRows) return null;
-
-        //    while (res.Read())
-        //    {
-        //        var userId = res.GetInt32("user_id");
-        //        var userName = res.GetString("user_name");
-        //        var userPassword = res.GetString("user_password");
-        //        var email = res.GetString("user_email");
-        //        var dateOfBirth = res.GetDateTime("user_date_of_birthday");
-        //        temp.Add(new Users { UserId = userId, UserName = userName, UserPassword = userPassword, Email = email, DateOfBirthday = dateOfBirth });
-        //    }
-        //}
+            var sql = $"INSERT INTO users (user_name, user_password, user_date_of_birthday) VALUES ({name}, {password}, {dateOfBirth});";
+            command.CommandText = sql;
+            var res = command.ExecuteReader();
+            Close();
+        }
     }
 }

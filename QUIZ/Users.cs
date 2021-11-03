@@ -12,7 +12,7 @@ namespace QUIZ
         public string UserName { get; set; }
         public string UserPassword { get; set; }
         public string Email { get; set; }
-        public DateTime DateOfBirthday { get; set; }
+        public string DateOfBirthday { get; set; }
 
         public Users() { }
     }
