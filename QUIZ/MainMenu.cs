@@ -36,12 +36,14 @@ namespace QUIZ
             string login = textBoxLogin.Text;
             string password = textBoxPassword.Text;
 
+            ChooseMenu chooseMenu = new ChooseMenu(login);
+
             bool nextStep = CheckEnterLoginPassword(login, password);
             nextStep = CheckLogin(nextStep, login);
 
             if (nextStep == true)
             {
-                ChooseMenu ChooseMenu = new ChooseMenu();
+                ChooseMenu ChooseMenu = new ChooseMenu(login);
                 ChooseMenu.Show();
                 this.Hide();
             }

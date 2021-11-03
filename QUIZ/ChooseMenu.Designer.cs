@@ -30,7 +30,7 @@ namespace QUIZ
         private void InitializeComponent()
         {
             this.buttonStartNewQUIZ = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelUserName = new System.Windows.Forms.Label();
             this.buttonShowResults = new System.Windows.Forms.Button();
             this.buttonShowTop20 = new System.Windows.Forms.Button();
             this.buttonSettings = new System.Windows.Forms.Button();
@@ -50,14 +50,15 @@ namespace QUIZ
             this.buttonStartNewQUIZ.UseVisualStyleBackColor = true;
             this.buttonStartNewQUIZ.Click += new System.EventHandler(this.StartNewQUIZ);
             // 
-            // label1
+            // labelUserName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(731, 428);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "UserName";
+            this.labelUserName.AutoSize = true;
+            this.labelUserName.Location = new System.Drawing.Point(12, 9);
+            this.labelUserName.Name = "labelUserName";
+            this.labelUserName.Size = new System.Drawing.Size(57, 13);
+            this.labelUserName.TabIndex = 1;
+            this.labelUserName.Text = "UserName";
+            this.labelUserName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonShowResults
             // 
@@ -133,7 +134,7 @@ namespace QUIZ
             this.Controls.Add(this.buttonSettings);
             this.Controls.Add(this.buttonShowTop20);
             this.Controls.Add(this.buttonShowResults);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelUserName);
             this.Controls.Add(this.buttonStartNewQUIZ);
             this.Name = "ChooseMenu";
             this.Text = "Menu";
@@ -145,7 +146,7 @@ namespace QUIZ
         #endregion
 
         private System.Windows.Forms.Button buttonStartNewQUIZ;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelUserName;
         private System.Windows.Forms.Button buttonShowResults;
         private System.Windows.Forms.Button buttonShowTop20;
         private System.Windows.Forms.Button buttonSettings;

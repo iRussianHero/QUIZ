@@ -12,9 +12,10 @@ namespace QUIZ
 {
     public partial class ChooseMenu : Form
     {
-        public ChooseMenu()
+        public ChooseMenu(string data)
         {
             InitializeComponent();
+            labelUserName.Text = $"User name: {data}";
         }
         private void StartNewQUIZ(object sender, EventArgs e)
         {
