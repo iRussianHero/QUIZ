@@ -41,6 +41,8 @@ namespace QUIZ
             this.textBoxRepeatPassword = new System.Windows.Forms.TextBox();
             this.errorProviderRegistration = new System.Windows.Forms.ErrorProvider(this.components);
             this.buttonRegister = new System.Windows.Forms.Button();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.labelEmail = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderRegistration)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +59,7 @@ namespace QUIZ
             // labelName
             // 
             this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point(254, 194);
+            this.labelName.Location = new System.Drawing.Point(254, 159);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(38, 13);
             this.labelName.TabIndex = 1;
@@ -66,7 +68,7 @@ namespace QUIZ
             // labelPassword
             // 
             this.labelPassword.AutoSize = true;
-            this.labelPassword.Location = new System.Drawing.Point(236, 233);
+            this.labelPassword.Location = new System.Drawing.Point(236, 198);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(56, 13);
             this.labelPassword.TabIndex = 2;
@@ -75,7 +77,7 @@ namespace QUIZ
             // labelRepeatPassword
             // 
             this.labelRepeatPassword.AutoSize = true;
-            this.labelRepeatPassword.Location = new System.Drawing.Point(199, 259);
+            this.labelRepeatPassword.Location = new System.Drawing.Point(199, 224);
             this.labelRepeatPassword.Name = "labelRepeatPassword";
             this.labelRepeatPassword.Size = new System.Drawing.Size(93, 13);
             this.labelRepeatPassword.TabIndex = 3;
@@ -92,7 +94,7 @@ namespace QUIZ
             // 
             // dateTimePickerDateOfBirth
             // 
-            this.dateTimePickerDateOfBirth.CustomFormat = "yyyy.MM.dd";
+            this.dateTimePickerDateOfBirth.CustomFormat = "yyyy-MM-dd";
             this.dateTimePickerDateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerDateOfBirth.Location = new System.Drawing.Point(298, 296);
             this.dateTimePickerDateOfBirth.MaxDate = new System.DateTime(2050, 1, 1, 0, 0, 0, 0);
@@ -104,21 +106,21 @@ namespace QUIZ
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(298, 191);
+            this.textBoxName.Location = new System.Drawing.Point(298, 156);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(200, 20);
             this.textBoxName.TabIndex = 6;
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(298, 230);
+            this.textBoxPassword.Location = new System.Drawing.Point(298, 195);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(200, 20);
             this.textBoxPassword.TabIndex = 7;
             // 
             // textBoxRepeatPassword
             // 
-            this.textBoxRepeatPassword.Location = new System.Drawing.Point(298, 256);
+            this.textBoxRepeatPassword.Location = new System.Drawing.Point(298, 221);
             this.textBoxRepeatPassword.Name = "textBoxRepeatPassword";
             this.textBoxRepeatPassword.Size = new System.Drawing.Size(200, 20);
             this.textBoxRepeatPassword.TabIndex = 8;
@@ -138,11 +140,29 @@ namespace QUIZ
             this.buttonRegister.UseVisualStyleBackColor = true;
             this.buttonRegister.Click += new System.EventHandler(this.buttonRegister_Click);
             // 
+            // textBoxEmail
+            // 
+            this.textBoxEmail.Location = new System.Drawing.Point(298, 258);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(200, 20);
+            this.textBoxEmail.TabIndex = 10;
+            // 
+            // labelEmail
+            // 
+            this.labelEmail.AutoSize = true;
+            this.labelEmail.Location = new System.Drawing.Point(254, 261);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.Size = new System.Drawing.Size(38, 13);
+            this.labelEmail.TabIndex = 11;
+            this.labelEmail.Text = "E-mail:";
+            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelEmail);
+            this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.buttonRegister);
             this.Controls.Add(this.textBoxRepeatPassword);
             this.Controls.Add(this.textBoxPassword);
@@ -176,5 +196,7 @@ namespace QUIZ
         private System.Windows.Forms.TextBox textBoxRepeatPassword;
         private System.Windows.Forms.ErrorProvider errorProviderRegistration;
         private System.Windows.Forms.Button buttonRegister;
+        private System.Windows.Forms.Label labelEmail;
+        private System.Windows.Forms.TextBox textBoxEmail;
     }
 }

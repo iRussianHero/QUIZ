@@ -50,14 +50,14 @@ namespace QUIZ
             return temp;
         }
 
-        public void RegisterNewGamer(string name, string password, string dateOfBirth)
+        public void RegisterNewGamer(string name, string password, string email, string dateOfBirth)
         {
             Open();
-            var temp = new List<Users>();
 
-            var sql = $"INSERT INTO users (user_name, user_password, user_date_of_birthday) VALUES ({name}, {password}, {dateOfBirth});";
+            var sql = $"INSERT INTO users (user_name, user_password, user_email, user_date_of_birthday) VALUES ({name}, {password}, {email}, {dateOfBirth});";
             command.CommandText = sql;
-            var res = command.ExecuteReader();
+            command.ExecuteReader();
+
             Close();
         }
     }

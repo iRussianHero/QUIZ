@@ -31,16 +31,18 @@ namespace QUIZ
             string name = textBoxName.Text;
             string password = textBoxPassword.Text;
             string repeatPassword = textBoxRepeatPassword.Text;
+            string email = textBoxEmail.Text;
             string dateOfBirth = dateTimePickerDateOfBirth.Text;
 
-            if (CheckInputData(name, password, repeatPassword, dateOfBirth) == true)
+            if (CheckInputData(name, password, repeatPassword, email, dateOfBirth) == true)
             {
-                DataBase DB = new DataBase();
-
+                DataBase db = new DataBase();
+                db.RegisterNewGamer(name, password, email, dateOfBirth);
+                
             }
         }
 
-        public bool CheckInputData(string name, string password, string repeatPassword, string dateOfBirth)
+        public bool CheckInputData(string name, string password, string repeatPassword, string email, string dateOfBirth)
         {
             errorProviderRegistration.Clear();
 
@@ -52,7 +54,7 @@ namespace QUIZ
 
             if (password == string.Empty)
             {
-                Error(labelPassword, "Yo enter empty Password");
+                Error(labelPassword, "You enter empty Password");
                 return false;
             }
 
@@ -62,7 +64,13 @@ namespace QUIZ
                 return false;
             }
 
-            string compare = (DateTime.Now).ToString("yyyy.MM.dd");
+            if (email == string.Empty)
+            {
+                Error(labelEmail, "You enter empty E-mail");
+                return false;
+            }
+
+            string compare = (DateTime.Now).ToString("yyyy-MM-dd");
             if (dateOfBirth == compare)
             {
                 Error(labelDateOfBirth, "You forgot change Date of Birth");
