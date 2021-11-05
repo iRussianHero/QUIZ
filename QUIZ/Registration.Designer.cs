@@ -174,6 +174,7 @@ namespace QUIZ
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.labelRegisterNewGamer);
             this.Name = "Registration";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Registration_FormClosed);
             this.Load += new System.EventHandler(this.Registration_Load);

@@ -129,5 +129,10 @@ namespace QUIZ
             this.Hide();
             Registration.Show();
         }
+
+        private void MainMenu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -28,5 +28,19 @@ namespace QUIZ
             buttonTheme2.Show();
             buttonRandomTheme.Show();
         }
+
+        private void buttonSettings_Click(object sender, EventArgs e)
+        {
+
+            Settings Settings = new Settings();
+            this.Hide();
+            Settings.Show();
+        }
+
+            private void ChooseMenu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MainMenu MainMenu = new MainMenu();
+            MainMenu.Close();
+        }
     }
 }

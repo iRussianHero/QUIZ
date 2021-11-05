@@ -89,6 +89,7 @@ namespace QUIZ
             this.buttonSettings.TabIndex = 4;
             this.buttonSettings.Text = "Settings";
             this.buttonSettings.UseVisualStyleBackColor = true;
+            this.buttonSettings.Click += new System.EventHandler(this.buttonSettings_Click);
             // 
             // buttonTheme1
             // 
@@ -137,6 +138,7 @@ namespace QUIZ
             this.Controls.Add(this.labelUserName);
             this.Controls.Add(this.buttonStartNewQUIZ);
             this.Name = "ChooseMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.ResumeLayout(false);
             this.PerformLayout();

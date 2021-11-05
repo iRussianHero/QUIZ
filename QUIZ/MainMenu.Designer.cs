@@ -139,7 +139,9 @@ namespace QUIZ
             this.Controls.Add(this.labelLogin);
             this.Controls.Add(this.label1);
             this.Name = "MainMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QUIZ game v0.1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainMenu_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderMainMenu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
