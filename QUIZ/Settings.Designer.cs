@@ -38,6 +38,10 @@ namespace QUIZ
             this.buttonChangePassword = new System.Windows.Forms.Button();
             this.buttonChangeDateOfBirthday = new System.Windows.Forms.Button();
             this.errorProviderSettings = new System.Windows.Forms.ErrorProvider(this.components);
+            this.labelUserName = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.labelPasswordChangeSucsess = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderSettings)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,6 +95,7 @@ namespace QUIZ
             this.buttonChangePassword.TabIndex = 5;
             this.buttonChangePassword.Text = "Change password";
             this.buttonChangePassword.UseVisualStyleBackColor = true;
+            this.buttonChangePassword.Click += new System.EventHandler(this.ChangePassword);
             // 
             // buttonChangeDateOfBirthday
             // 
@@ -107,11 +112,56 @@ namespace QUIZ
             this.errorProviderSettings.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderSettings.ContainerControl = this;
             // 
+            // labelUserName
+            // 
+            this.labelUserName.AutoSize = true;
+            this.labelUserName.Location = new System.Drawing.Point(12, 22);
+            this.labelUserName.Name = "labelUserName";
+            this.labelUserName.Size = new System.Drawing.Size(33, 13);
+            this.labelUserName.TabIndex = 7;
+            this.labelUserName.Text = "Login";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "UserName:";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(325, 408);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(129, 30);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Back to Menu";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.BackToMenu);
+            // 
+            // labelPasswordChangeSucsess
+            // 
+            this.labelPasswordChangeSucsess.AutoSize = true;
+            this.labelPasswordChangeSucsess.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelPasswordChangeSucsess.ForeColor = System.Drawing.Color.OliveDrab;
+            this.labelPasswordChangeSucsess.Location = new System.Drawing.Point(81, 266);
+            this.labelPasswordChangeSucsess.Name = "labelPasswordChangeSucsess";
+            this.labelPasswordChangeSucsess.Size = new System.Drawing.Size(246, 20);
+            this.labelPasswordChangeSucsess.TabIndex = 11;
+            this.labelPasswordChangeSucsess.Text = "Password updated - Sucsess!";
+            this.labelPasswordChangeSucsess.Visible = false;
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelPasswordChangeSucsess);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelUserName);
             this.Controls.Add(this.buttonChangeDateOfBirthday);
             this.Controls.Add(this.buttonChangePassword);
             this.Controls.Add(this.textBoxNewPassword);
@@ -139,5 +189,9 @@ namespace QUIZ
         private System.Windows.Forms.Button buttonChangePassword;
         private System.Windows.Forms.Button buttonChangeDateOfBirthday;
         private System.Windows.Forms.ErrorProvider errorProviderSettings;
+        private System.Windows.Forms.Label labelUserName;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label labelPasswordChangeSucsess;
     }
 }

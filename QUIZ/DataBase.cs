@@ -60,5 +60,16 @@ namespace QUIZ
 
             Close();
         }
+
+        public void ChangePassword(string name, string password)
+        {
+            Open();
+
+            var sql = $"UPDATE users SET user_password = '{password}' WHERE user_name = '{name}';";
+            command.CommandText = sql;
+            command.ExecuteReader();
+
+            Close();
+        }
     }
 }

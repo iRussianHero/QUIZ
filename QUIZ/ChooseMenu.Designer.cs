@@ -37,6 +37,7 @@ namespace QUIZ
             this.buttonTheme1 = new System.Windows.Forms.Button();
             this.buttonTheme2 = new System.Windows.Forms.Button();
             this.buttonRandomTheme = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonStartNewQUIZ
@@ -53,11 +54,11 @@ namespace QUIZ
             // labelUserName
             // 
             this.labelUserName.AutoSize = true;
-            this.labelUserName.Location = new System.Drawing.Point(12, 9);
+            this.labelUserName.Location = new System.Drawing.Point(12, 22);
             this.labelUserName.Name = "labelUserName";
-            this.labelUserName.Size = new System.Drawing.Size(57, 13);
+            this.labelUserName.Size = new System.Drawing.Size(33, 13);
             this.labelUserName.TabIndex = 1;
-            this.labelUserName.Text = "UserName";
+            this.labelUserName.Text = "Login";
             this.labelUserName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonShowResults
@@ -124,11 +125,21 @@ namespace QUIZ
             this.buttonRandomTheme.UseVisualStyleBackColor = true;
             this.buttonRandomTheme.Visible = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "UserName:";
+            // 
             // ChooseMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonRandomTheme);
             this.Controls.Add(this.buttonTheme2);
             this.Controls.Add(this.buttonTheme1);
@@ -155,5 +166,6 @@ namespace QUIZ
         private System.Windows.Forms.Button buttonTheme1;
         private System.Windows.Forms.Button buttonTheme2;
         private System.Windows.Forms.Button buttonRandomTheme;
+        private System.Windows.Forms.Label label1;
     }
 }

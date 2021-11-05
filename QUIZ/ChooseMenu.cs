@@ -19,7 +19,7 @@ namespace QUIZ
         public ChooseMenu(string data)
         {
             InitializeComponent();
-            labelUserName.Text = $"User name: {data}";
+            labelUserName.Text = data;
         }
         private void StartNewQUIZ(object sender, EventArgs e)
         {
@@ -31,8 +31,7 @@ namespace QUIZ
 
         private void buttonSettings_Click(object sender, EventArgs e)
         {
-
-            Settings Settings = new Settings();
+            Settings Settings = new Settings(labelUserName.Text);
             this.Hide();
             Settings.Show();
         }

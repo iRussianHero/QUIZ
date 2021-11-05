@@ -16,21 +16,36 @@ namespace QUIZ
         {
             InitializeComponent();
         }
+        public Settings(string data)
+        {
+            InitializeComponent();
+            labelUserName.Text = data;
+        }
 
         private void ChangePassword(object sender, EventArgs e)
         {
-            var db = new DataBase();
-            var users = new List<Users>();
+            DataBase db = new DataBase();
+            string login = labelUserName.Text;
             string newPassword = textBoxNewPassword.Text;
 
-            users = db.UsersData();
-            foreach (var item in users)
+            if (newPassword == string.Empty)
             {
-
+                Error(labelChangePassword, "Enter new Password");
             }
+
+            db.ChangePassword(login, newPassword);
+
+            labelPasswordChangeSucsess.Visible = true;
         }
         private void Settings_FormClosed(object sender, FormClosedEventArgs e)
         {
+            ChooseMenu ChooseMenu = new ChooseMenu();
+            ChooseMenu.Close();
+        }
+
+        private void BackToMenu(object sender, EventArgs e)
+        {
+            this.Close();
             ChooseMenu ChooseMenu = new ChooseMenu();
             ChooseMenu.Show();
         }

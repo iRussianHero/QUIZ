@@ -36,7 +36,7 @@ namespace QUIZ
             string login = textBoxLogin.Text;
             string password = textBoxPassword.Text;
 
-            ChooseMenu chooseMenu = new ChooseMenu(login);
+            ChooseMenu chooseMenu = new ChooseMenu(login); //TODO Доделать локальное хранение логина для передачи в формы
 
             bool nextStep = CheckEnterLoginPassword(login, password);
             nextStep = CheckLogin(nextStep, login);
