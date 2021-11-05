@@ -40,6 +40,7 @@ namespace QUIZ
 
             bool nextStep = CheckEnterLoginPassword(login, password);
             nextStep = CheckLogin(nextStep, login);
+            nextStep = CheckPassword(nextStep, password);
 
             if (nextStep == true)
             {
@@ -75,17 +76,48 @@ namespace QUIZ
             if (nextStep == true)
             {
                 var users = new List<Users>();
-                users = db.UsersData(); //TODO добавление всех пользователей в LIST
-
+                users = db.UsersData();
+                bool checkLogin = false;
                 foreach (var user in users)
                 {
                     if (user.UserName == login)
                     {
-                        return true;
+                        checkLogin = true;
                     }
+                }
+                if (!checkLogin)
+                {
                     Error(buttonEnterLoginPassword, "Login or Password doesn't exist");
                     return false;
                 }
+                return true;
+            }
+            Error(buttonEnterLoginPassword, "Login or Password doesn't exist");
+            return false;
+        }
+
+        public bool CheckPassword(bool nextStep, string password)
+        {
+            var db = new DataBase();
+
+            if (nextStep == true)
+            {
+                var users = new List<Users>();
+                users = db.UsersData();
+                bool checkLogin = false;
+                foreach (var user in users)
+                {
+                    if (user.UserPassword == password)
+                    {
+                        checkLogin = true;
+                    }
+                }
+                if (!checkLogin)
+                {
+                    Error(buttonEnterLoginPassword, "Login or Password doesn't exist");
+                    return false;
+                }
+                return true;
             }
             Error(buttonEnterLoginPassword, "Login or Password doesn't exist");
             return false;
