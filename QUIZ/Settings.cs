@@ -37,6 +37,18 @@ namespace QUIZ
 
             labelPasswordChangeSucsess.Visible = true;
         }
+
+        private void ChangeDateOfBirthday(object sender, EventArgs e)
+        {
+            DataBase db = new DataBase();
+            string login = labelUserName.Text;
+            string newDateOfBirthday = (dateTimePickerDateOfBirth.Value).ToString("yyyy-MM-dd");
+
+            db.ChangeDateOfBirthday(login, newDateOfBirthday);
+
+            labelDayOfBirthdayChangeSucsess.Visible = true;
+        }
+
         private void Settings_FormClosed(object sender, FormClosedEventArgs e)
         {
             ChooseMenu ChooseMenu = new ChooseMenu();

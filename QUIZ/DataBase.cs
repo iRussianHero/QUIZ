@@ -71,5 +71,16 @@ namespace QUIZ
 
             Close();
         }
+
+        public void ChangeDateOfBirthday(string name, string dateOfBirthday)
+        {
+            Open();
+
+            var sql = $"UPDATE users SET user_date_of_birthday = '{dateOfBirthday}' WHERE user_name = '{name}';";
+            command.CommandText = sql;
+            command.ExecuteReader();
+
+            Close();
+        }
     }
 }

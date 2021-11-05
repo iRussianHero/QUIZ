@@ -33,7 +33,6 @@ namespace QUIZ
             this.labelTitle = new System.Windows.Forms.Label();
             this.labelChangePassword = new System.Windows.Forms.Label();
             this.labelChangeDateOfBirth = new System.Windows.Forms.Label();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.textBoxNewPassword = new System.Windows.Forms.TextBox();
             this.buttonChangePassword = new System.Windows.Forms.Button();
             this.buttonChangeDateOfBirthday = new System.Windows.Forms.Button();
@@ -42,6 +41,8 @@ namespace QUIZ
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.labelPasswordChangeSucsess = new System.Windows.Forms.Label();
+            this.dateTimePickerDateOfBirth = new System.Windows.Forms.DateTimePicker();
+            this.labelDayOfBirthdayChangeSucsess = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderSettings)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,13 +74,6 @@ namespace QUIZ
             this.labelChangeDateOfBirth.TabIndex = 2;
             this.labelChangeDateOfBirth.Text = "Change date of birthday:";
             // 
-            // monthCalendar1
-            // 
-            this.monthCalendar1.Location = new System.Drawing.Point(578, 151);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 3;
-            this.monthCalendar1.TodayDate = new System.DateTime(2021, 11, 5, 0, 0, 0, 0);
-            // 
             // textBoxNewPassword
             // 
             this.textBoxNewPassword.Location = new System.Drawing.Point(162, 214);
@@ -99,12 +93,13 @@ namespace QUIZ
             // 
             // buttonChangeDateOfBirthday
             // 
-            this.buttonChangeDateOfBirthday.Location = new System.Drawing.Point(578, 325);
+            this.buttonChangeDateOfBirthday.Location = new System.Drawing.Point(539, 240);
             this.buttonChangeDateOfBirthday.Name = "buttonChangeDateOfBirthday";
             this.buttonChangeDateOfBirthday.Size = new System.Drawing.Size(164, 23);
             this.buttonChangeDateOfBirthday.TabIndex = 6;
             this.buttonChangeDateOfBirthday.Text = "Change date of birthday";
             this.buttonChangeDateOfBirthday.UseVisualStyleBackColor = true;
+            this.buttonChangeDateOfBirthday.Click += new System.EventHandler(this.ChangeDateOfBirthday);
             // 
             // errorProviderSettings
             // 
@@ -153,11 +148,37 @@ namespace QUIZ
             this.labelPasswordChangeSucsess.Text = "Password updated - Sucsess!";
             this.labelPasswordChangeSucsess.Visible = false;
             // 
+            // dateTimePickerDateOfBirth
+            // 
+            this.dateTimePickerDateOfBirth.CustomFormat = "";
+            this.dateTimePickerDateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerDateOfBirth.Location = new System.Drawing.Point(539, 214);
+            this.dateTimePickerDateOfBirth.MaxDate = new System.DateTime(2050, 1, 1, 0, 0, 0, 0);
+            this.dateTimePickerDateOfBirth.MinDate = new System.DateTime(1950, 1, 1, 0, 0, 0, 0);
+            this.dateTimePickerDateOfBirth.Name = "dateTimePickerDateOfBirth";
+            this.dateTimePickerDateOfBirth.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerDateOfBirth.TabIndex = 12;
+            this.dateTimePickerDateOfBirth.Value = new System.DateTime(2021, 11, 3, 0, 0, 0, 0);
+            // 
+            // labelDayOfBirthdayChangeSucsess
+            // 
+            this.labelDayOfBirthdayChangeSucsess.AutoSize = true;
+            this.labelDayOfBirthdayChangeSucsess.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelDayOfBirthdayChangeSucsess.ForeColor = System.Drawing.Color.OliveDrab;
+            this.labelDayOfBirthdayChangeSucsess.Location = new System.Drawing.Point(447, 266);
+            this.labelDayOfBirthdayChangeSucsess.Name = "labelDayOfBirthdayChangeSucsess";
+            this.labelDayOfBirthdayChangeSucsess.Size = new System.Drawing.Size(292, 20);
+            this.labelDayOfBirthdayChangeSucsess.TabIndex = 13;
+            this.labelDayOfBirthdayChangeSucsess.Text = "Day of Birthday updated - Sucsess!";
+            this.labelDayOfBirthdayChangeSucsess.Visible = false;
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelDayOfBirthdayChangeSucsess);
+            this.Controls.Add(this.dateTimePickerDateOfBirth);
             this.Controls.Add(this.labelPasswordChangeSucsess);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
@@ -165,7 +186,6 @@ namespace QUIZ
             this.Controls.Add(this.buttonChangeDateOfBirthday);
             this.Controls.Add(this.buttonChangePassword);
             this.Controls.Add(this.textBoxNewPassword);
-            this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.labelChangeDateOfBirth);
             this.Controls.Add(this.labelChangePassword);
             this.Controls.Add(this.labelTitle);
@@ -184,7 +204,6 @@ namespace QUIZ
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Label labelChangePassword;
         private System.Windows.Forms.Label labelChangeDateOfBirth;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.TextBox textBoxNewPassword;
         private System.Windows.Forms.Button buttonChangePassword;
         private System.Windows.Forms.Button buttonChangeDateOfBirthday;
@@ -193,5 +212,7 @@ namespace QUIZ
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label labelPasswordChangeSucsess;
+        private System.Windows.Forms.DateTimePicker dateTimePickerDateOfBirth;
+        private System.Windows.Forms.Label labelDayOfBirthdayChangeSucsess;
     }
 }
