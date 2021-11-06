@@ -54,9 +54,9 @@ namespace QUIZ
         {
             Open();
 
-            var sql = $"INSERT INTO users (user_name, user_password, user_email, user_date_of_birthday) VALUES ({name}, {password}, {email}, '{dateOfBirth}');";
+            var sql = $"INSERT INTO users (user_name, user_password, user_email, user_date_of_birthday) VALUES ({name}, {password}, '{email}', '{dateOfBirth}');";
             command.CommandText = sql;
-            command.ExecuteReader();
+            command.ExecuteNonQuery();
 
             Close();
         }
@@ -81,6 +81,21 @@ namespace QUIZ
             command.ExecuteReader();
 
             Close();
+        }
+
+        public string ShowCurrentDateOfBirth(string login)
+        {
+            DataBase db = new DataBase();
+            var users = db.UsersData();
+
+            foreach (var user in users)
+            {
+                if (login == user.UserName)
+                {
+                    return user.DateOfBirthday;
+                }
+            }
+            return string.Empty;
         }
     }
 }

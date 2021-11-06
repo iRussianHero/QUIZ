@@ -43,6 +43,8 @@ namespace QUIZ
             this.labelPasswordChangeSucsess = new System.Windows.Forms.Label();
             this.dateTimePickerDateOfBirth = new System.Windows.Forms.DateTimePicker();
             this.labelDayOfBirthdayChangeSucsess = new System.Windows.Forms.Label();
+            this.labelCurrentDateoOfBirth = new System.Windows.Forms.Label();
+            this.textBoxCurrentDateOfBirth = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderSettings)).BeginInit();
             this.SuspendLayout();
             // 
@@ -172,11 +174,29 @@ namespace QUIZ
             this.labelDayOfBirthdayChangeSucsess.Text = "Day of Birthday updated - Sucsess!";
             this.labelDayOfBirthdayChangeSucsess.Visible = false;
             // 
+            // labelCurrentDateoOfBirth
+            // 
+            this.labelCurrentDateoOfBirth.AutoSize = true;
+            this.labelCurrentDateoOfBirth.Location = new System.Drawing.Point(413, 186);
+            this.labelCurrentDateoOfBirth.Name = "labelCurrentDateoOfBirth";
+            this.labelCurrentDateoOfBirth.Size = new System.Drawing.Size(120, 13);
+            this.labelCurrentDateoOfBirth.TabIndex = 14;
+            this.labelCurrentDateoOfBirth.Text = "Current date of birthday:";
+            // 
+            // textBoxCurrentDateOfBirth
+            // 
+            this.textBoxCurrentDateOfBirth.Location = new System.Drawing.Point(539, 183);
+            this.textBoxCurrentDateOfBirth.Name = "textBoxCurrentDateOfBirth";
+            this.textBoxCurrentDateOfBirth.Size = new System.Drawing.Size(200, 20);
+            this.textBoxCurrentDateOfBirth.TabIndex = 15;
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBoxCurrentDateOfBirth);
+            this.Controls.Add(this.labelCurrentDateoOfBirth);
             this.Controls.Add(this.labelDayOfBirthdayChangeSucsess);
             this.Controls.Add(this.dateTimePickerDateOfBirth);
             this.Controls.Add(this.labelPasswordChangeSucsess);
@@ -193,6 +213,7 @@ namespace QUIZ
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Settings";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Settings_FormClosed);
+            this.Load += new System.EventHandler(this.ShowDateOfBirth);
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderSettings)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -214,5 +235,7 @@ namespace QUIZ
         private System.Windows.Forms.Label labelPasswordChangeSucsess;
         private System.Windows.Forms.DateTimePicker dateTimePickerDateOfBirth;
         private System.Windows.Forms.Label labelDayOfBirthdayChangeSucsess;
+        private System.Windows.Forms.TextBox textBoxCurrentDateOfBirth;
+        private System.Windows.Forms.Label labelCurrentDateoOfBirth;
     }
 }

@@ -47,6 +47,8 @@ namespace QUIZ
             db.ChangeDateOfBirthday(login, newDateOfBirthday);
 
             labelDayOfBirthdayChangeSucsess.Visible = true;
+
+            ShowDateOfBirth(sender, e);
         }
 
         private void Settings_FormClosed(object sender, FormClosedEventArgs e)
@@ -60,6 +62,14 @@ namespace QUIZ
             this.Close();
             ChooseMenu ChooseMenu = new ChooseMenu();
             ChooseMenu.Show();
+        } //TODO Не закрывать форму, а передавать данные
+
+        private void ShowDateOfBirth(object sender, EventArgs e)
+        {
+            DataBase db = new DataBase();
+            var login = labelUserName.Text;
+
+            textBoxCurrentDateOfBirth.Text = db.ShowCurrentDateOfBirth(login);
         }
 
         private void Error(Control name, string error)
