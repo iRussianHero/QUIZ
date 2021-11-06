@@ -59,10 +59,10 @@ namespace QUIZ
 
         private void BackToMenu(object sender, EventArgs e)
         {
-            this.Close();
-            ChooseMenu ChooseMenu = new ChooseMenu();
+            this.Hide();
+            ChooseMenu ChooseMenu = new ChooseMenu(labelUserName.Text);
             ChooseMenu.Show();
-        } //TODO Не закрывать форму, а передавать данные
+        }
 
         private void ShowDateOfBirth(object sender, EventArgs e)
         {

@@ -36,8 +36,9 @@ namespace QUIZ
             Settings.Show();
         }
 
-            private void ChooseMenu_FormClosed(object sender, FormClosedEventArgs e)
+        private void ChooseMenu_FormClosed(object sender, FormClosedEventArgs e)
         {
+            this.Hide();
             MainMenu MainMenu = new MainMenu();
             MainMenu.Close();
         }

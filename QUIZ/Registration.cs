@@ -21,11 +21,13 @@ namespace QUIZ
         {
             this.Hide();
         }
+
         private void Error(Control name, string error)
         {
             errorProviderRegistration.SetIconAlignment(name, ErrorIconAlignment.MiddleLeft);
             errorProviderRegistration.SetError(name, error);
         }
+
         private void buttonRegister_Click(object sender, EventArgs e)
         {
             string name = textBoxName.Text;
@@ -99,7 +101,8 @@ namespace QUIZ
         }
 
         private void Registration_FormClosed(object sender, FormClosedEventArgs e)
-        { 
+        {
+            this.Hide();
             MainMenu MainMenu = new MainMenu();
             MainMenu.Show();
         }
